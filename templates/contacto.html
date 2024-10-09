@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Academia de Taekwondo Chang Hun - Promovemos una práctica integral de defensa personal con principios y valores clásicos para un gran carácter.">
+    <title>Contacto - CHANG HUN TAEKWONDO</title>
+    <link rel="icon" href="{{ url_for('static', filename='logo/Changhun.PNG') }}">
+    <link href="{{url_for('static', filename = 'css/styles.css' )}}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navegación -->
+    <header>
+        <nav id="menu">
+            <img src="{{ url_for('static', filename='imagenes/Changhun.PNG') }}" alt="Logo">
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/Acerca_nosotros">Quiénes Somos</a></li>
+                <li><a href="/Beneficios">Beneficios Integrales</a></li>
+                <li><a href="/Horarios">Horarios</a></li>
+                <li><a href="/Galeria">Galería</a></li>
+                <li><a href="/Contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content">
+        <h1>ACADEMIA DE TAEKWONDO <br> CHANG HUN</h1>
+        <h2>Puedes encontrarnos en la siguiente Ubicación</h2>
+        <div class="map-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.27663050895!2d-74.04505642519567!3d4.721939441473465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f854347b4a891%3A0xffaa3b864f109d0e!2sTAEKWONDO%20Academia%20Chang%20Hun!5e0!3m2!1ses!2sco!4v1716000914243!5m2!1ses!2sco"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <h2>Contacte con nosotros para obtener más información:</h2>
+        <p> <strong> Celular: </strong> 3002039432</p>
+        <p> <strong> Téfono: </strong> 4805458</p>
+        <h4> Si quiere información vía correo electrónico ingrese su correo </h4>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <ul class="flashes">
+            {% for category, message in messages %}
+            <li class="{{ category }}">{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+
+        <form action="/Contacto" method="post" id="email-form">
+            <p>
+                <strong>Email:</strong>
+                <input type="email" name="email" id="email" placeholder="ejemplo@outlook.com" required>
+                <button type="submit" class="btn btn-success">Enviar</button>
+            </p>
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        </form>
+    </div>
+
+    <!-- Redes sociales -->
+    <div class="social-media">
+        <h2>Síguenos:</h2>
+        <a href="https://wa.me/573002039432?text=Hola quisiera saber acerca de la academia" class="social-icon"
+            target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="https://www.instagram.com/changhuncolombia/" class="social-icon" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com/changhuncolombia/?locale=es_LA" class="social-icon" target="_blank">
+            <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://www.tiktok.com/@changhuncolombia" class="social-icon" target="_blank">
+            <i class="fa-brands fa-tiktok"></i>
+        </a>
+        <a href="https://www.youtube.com/@ChangHunColombia/featured" class="social-icon" target="_blank">
+            <i class="fab fa-youtube"></i>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>

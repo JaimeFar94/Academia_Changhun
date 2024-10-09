@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHANG HUN TAEKWONDO</title>
+    <link rel="icon" href="{{ url_for('static', filename='logo/Changhun.PNG') }}">
+    <link href="{{url_for('static', filename = 'css/styles.css' )}}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navegación -->
+    <header>
+        <nav id="menu">
+            <img src="{{ url_for('static', filename='imagenes/Changhun.PNG') }}" alt="Logo">
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/Acerca_nosotros">Quiénes Somos</a></li>
+                <li><a href="/Beneficios">Beneficios Integrales</a></li>
+                <li><a href="/Horarios">Horarios</a></li>
+                <li><a href="/Galeria">Galería</a></li>
+                <li><a href="/Contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="schedule">
+        <h1>HORARIOS DE ENTRENAMIENTO</h1>
+        <div style="text-align:center;">
+            <table border="1" style="margin: 0 auto;" id="Horarios" name="Horarios">
+                <thead>
+                    <tr>
+                        <th>DÍA</th>
+                        <th>HORARIOS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Lunes</th>
+                        <td> Día de Descanso</td>
+                    </tr>
+                    <tr>
+                        <th>Martes</th>
+                        <td>06:30 a.m, 04:00 p.m, 05:00 p.m, 06:00 p.m</td>
+                    </tr>
+                    <tr>
+                        <th>Miércoles</th>
+                        <td>05:00 p.m, 06:00 p.m</td>
+                    </tr>
+                    <tr>
+                        <th>Jueves</th>
+                        <td>06:30 a.m, 04:00 p.m, 05:00 p.m, 06:00 p.m - Clase de Combate</td>
+                    </tr>
+                    <tr>
+                        <th>Viernes</th>
+                        <td>04:00 p.m, 05:00 p.m, 06:00 p.m</td>
+                    </tr>
+                    <tr>
+                        <th>Sábado</th>
+                        <td>09:00 a.m, 10:00 a.m, 11:00 a.m - Clase de Combate</td>
+                    </tr>
+                    <tr>
+                        <th>Domingo</th>
+                        <td>09:00 a.m, 10:00 a.m, 11:00 a.m - Clase de Combate</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p>3 clases por semana, preferiblemente día por medio. Aleatoriamente se puede disponer de los días y horarios a
+            conveniencia.</p>
+
+        <script src="js/scripts.js"></script>
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+
+        <!-- Redes sociales -->
+        <div class="social-media">
+            <h2>Síguenos:</h2>
+            <a href="https://wa.me/573002039432?text=Hola quisiera saber acerca de la academia" class="social-icon"
+                target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="https://www.instagram.com/changhuncolombia/" class="social-icon" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/changhuncolombia/?locale=es_LA" class="social-icon" target="_blank">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://www.tiktok.com/@changhuncolombia" class="social-icon" target="_blank">
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
+            <a href="https://www.youtube.com/@ChangHunColombia/featured" class="social-icon" target="_blank">
+                <i class="fab fa-youtube"></i>
+            </a>
+        </div>
+    </section>
+</body>
+
+</html>

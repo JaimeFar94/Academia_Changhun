@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHANG HUN TAEKWONDO</title>
+    <link rel="icon" href="{{ url_for('static', filename='logo/Changhun.PNG') }}">
+    <link href="{{url_for('static', filename = 'css/styles.css' )}}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <header>
+        <nav id="menu">
+            <img src="{{ url_for('static', filename='imagenes/Changhun.PNG') }}" alt="Logo">
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/Acerca_nosotros">Quiénes Somos</a></li>
+                <li><a href="/Beneficios">Beneficios Integrales</a></li>
+                <li><a href="/Horarios">Horarios</a></li>
+                <li><a href="/Galeria">Galería</a></li>
+                <li><a href="/Contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content">
+        <h1>Beneficios Integrales del Taekwondo</h1>
+        <p>El Taekwondo ofrece múltiples beneficios para personas de todas las edades. A continuación, detallamos algunos de los beneficios más destacados tanto para niños como para adultos:</p>
+        
+        <h2>Beneficios para Niños</h2>
+        <ul id="beneficios_taekwondo" name="beneficios_taekwondo">
+            <li><strong>Disciplina:</strong> El Taekwondo enseña a los niños la importancia de la disciplina y el respeto, tanto hacia sus instructores como hacia sus compañeros.</li>
+            <li><strong>Confianza en sí mismos:</strong> La práctica regular mejora la autoestima y la confianza a través de la superación de retos y la adquisición de nuevas habilidades.</li>
+            <li><strong>Mejora de la concentración:</strong> Las técnicas y movimientos del Taekwondo requieren enfoque y atención, ayudando a los niños a mejorar su capacidad de concentración.</li>
+            <li><strong>Condición física:</strong> El ejercicio regular fortalece el cuerpo, mejora la coordinación y promueve hábitos saludables desde una edad temprana.</li>
+        </ul>
+        
+        <h2>Beneficios para Adultos</h2>
+        <ul id="beneficios_taekwondo" name="beneficios_taekwondo">
+            <li><strong>Reducción del estrés:</strong> La práctica del Taekwondo libera endorfinas, reduciendo el estrés y promoviendo una sensación de bienestar general.</li>
+            <li><strong>Acondicionamiento físico:</strong> Mejora la fuerza, la flexibilidad y la resistencia, contribuyendo a una mejor salud física en general.</li>
+            <li><strong>Autodefensa:</strong> Los adultos aprenden técnicas efectivas de autodefensa que pueden ser útiles en situaciones de peligro.</li>
+            <li><strong>Desarrollo personal:</strong> La filosofía del Taekwondo promueve valores como la perseverancia, el respeto y la integridad, fomentando un crecimiento personal continuo.</li>
+        </ul>
+    </div>
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <!-- Redes sociales -->
+    <div class="social-media">
+        <h2>Síguenos:</h2>
+        <a href="https://wa.me/573002039432?text=Hola quisiera saber acerca de la academia" class="social-icon" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="https://www.instagram.com/changhuncolombia/" class="social-icon" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com/changhuncolombia/?locale=es_LA" class="social-icon" target="_blank">
+            <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://www.tiktok.com/@changhuncolombia" class="social-icon" target="_blank">
+            <i class="fa-brands fa-tiktok"></i>
+        </a>
+        <a href="https://www.youtube.com/@ChangHunColombia/featured" class="social-icon" target="_blank">
+            <i class="fab fa-youtube"></i>
+        </a>
+    </div>
+
+<!-- Scripts -->
+<script src="js/scripts.js"></script>
+</body>
+</html>
+

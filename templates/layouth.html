@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chang Hun Taekwondo</title>
+    <link rel="icon" href="./logo/Changhun.ico">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="{{url_for('static', filename='css/styles.css')}}" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header y Menú de navegación -->
+    <header class="bg-dark py-2">
+        <div id="menu" class="container d-flex justify-content-between align-items-center">
+            <img src="{{ url_for('static', filename='imagenes/Changhun.PNG') }}" alt="Logo Chang Hun Taekwondo" id="inicio" name="inicio" height="60">
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link text-white fw-bold" href="/">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link text-white fw-bold" href="/Acerca_nosotros">Quiénes Somos</a></li>
+                <li class="nav-item"><a class="nav-link text-white fw-bold" href="/Beneficios">Beneficios</a></li>
+                <li class="nav-item"><a class="nav-link text-white fw-bold" href="/Horarios">Horarios</a></li>
+                <li class="nav-item"><a class="nav-link text-white fw-bold" href="/Galeria">Galería</a></li>
+                <li class="nav-item"><a class="nav-link text-white fw-bold" href="/Contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Sección Títulos -->
+    <section class="container text-center py-4">
+        <h1 class="display-4">Bienvenidos a Chang Hun Taekwondo</h1>
+        <h2 class="h3 mt-4">Conoce los beneficios del Taekwondo</h2>
+    </section>
+
+    <!-- Lista de Beneficios -->
+    <section class="container">
+        <ul class="list-group taekwondo-benefits mx-auto shadow-sm p-3 mb-5 bg-white rounded">
+            <li class="list-group-item">Beneficio 1</li>
+            <li class="list-group-item">Beneficio 2</li>
+            <li class="list-group-item">Beneficio 3</li>
+            <li class="list-group-item">Beneficio 4</li>
+        </ul>
+    </section>
+
+    <!-- Video de YouTube -->
+    <section class="container text-center mb-5">
+        <iframe class="embed-responsive-item rounded" src="https://www.youtube.com/embed/your-video-id" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <!-- Redes Sociales -->
+    <section class="social-media bg-dark text-white text-center py-4">
+        <h2>Síguenos en nuestras redes sociales</h2>
+        <a href="#" class="social-icon mx-2 text-white"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="social-icon mx-2 text-white"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-icon mx-2 text-white"><i class="fab fa-whatsapp"></i></a>
+    </section>
+
+    <!-- Galería -->
+    <section class="container my-5">
+        <ul class="galeria d-flex flex-wrap justify-content-around">
+            <li><img src="image1.jpg" alt="Imagen 1" class="img-thumbnail"></li>
+            <li><img src="image2.jpg" alt="Imagen 2" class="img-thumbnail"></li>
+            <li><img src="image3.jpg" alt="Imagen 3" class="img-thumbnail"></li>
+        </ul>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
